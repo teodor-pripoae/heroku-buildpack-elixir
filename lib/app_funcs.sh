@@ -69,6 +69,10 @@ function compile_app() {
   mix compile --force || exit 1
   mix compile.protocols || exit 1
 
+  # Touch _build to avoid recompilation when calling mix app.start
+  # on the dyno
+  find _build -exec touch {} \;
+
   export GIT_DIR=$git_dir_value
   cd - > /dev/null
 }
