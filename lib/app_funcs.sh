@@ -22,6 +22,8 @@ function copy_hex() {
   hex_file=`basename ${hex_source:-hex.ez}`
 
   cp ${HOME}/.hex/registry.ets ${build_path}/.hex/
+  cp ${HOME}/.hex/registry.ets.gz ${build_path}/.hex/
+  cp ${HOME}/.hex/packages ${build_path}/.hex/packages
   cp ${HOME}/.mix/archives/${hex_file} ${build_path}/.mix/archives
   cp ${HOME}/.mix/rebar ${build_path}/.mix/rebar
 }
