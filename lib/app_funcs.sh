@@ -23,6 +23,7 @@ function copy_hex() {
 
   cp ${HOME}/.hex/registry.ets ${build_path}/.hex/
   cp ${HOME}/.mix/archives/${hex_file} ${build_path}/.mix/archives
+  cp ${HOME}/.mix/rebar ${build_path}/.mix/rebar
 }
 
 
