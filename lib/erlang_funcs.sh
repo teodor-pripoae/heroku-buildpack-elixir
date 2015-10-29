@@ -4,12 +4,7 @@ function erlang_tarball() {
 
 
 function download_erlang() {
-  if [ ${STACK} = "cedar-14" ] ; then
-    erlang_package_url="http://s3.hex.pm/builds/erlang/ubuntu-14.04"
-  else
-    erlang_package_url="http://s3.hex.pm/builds/erlang/ubuntu-10.04"
-  fi
-
+  erlang_package_url="file:///buildpacks/heroku-buildpack-elixir"
   erlang_package_url="${erlang_package_url}/$(erlang_tarball)"
 
   # If a previous download does not exist, then always re-download
